@@ -1,8 +1,6 @@
-![ManageBlog-logo](https://user-images.githubusercontent.com/47486908/73130952-16be8e80-3fe1-11ea-992e-037efbe70422.png)
+# Blog Manager Back-end
 
-# ManageBlog Back-end
-
-Dafne é uma aplicação web que permite que donos de pequenos mercados controlem o fluxo de caixa de forma simples e intuitiva. Inicialmente esta aplicação será testada em uma padaria, para que possam vir novas ideias no decorrer do uso e insights de parte do usuário. Este back-end será de grande importancia para aplicação, pois ele que ira fazer a comunicação do front-end com o banco de dados.
+Blog Manager é uma aplicação web responsiva que é responsavel pela criação. edição e remoção de posts de um blog.
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -23,8 +21,6 @@ Dafne é uma aplicação web que permite que donos de pequenos mercados controle
 -  [Sucrase](https://github.com/alangpierce/sucrase)
 -  [MongoDB](https://mongodb.com)
 -  [Mongoose](https://mongoosejs.com/)
--  [Axios](https://github.com/axios/axios)
-
 
 ## :warning: Pré-requisitos
 Para instalar essa aplicação é preciso ter o [Node na versão LTS](https://nodejs.org/en/) e o [git](https://git-scm.com) instalados na sua máquina.
@@ -32,13 +28,13 @@ Para instalar essa aplicação é preciso ter o [Node na versão LTS](https://no
 ## :information_source: Instalação
 ```bash
 # Clone esse repositorio
-$ git clone https://github.com/fabriciodanioj/dafne-backend
+$ git clone https://github.com/fabriciodanioj/blog-manager
 
 # Entre na pasta do projeto
-$ cd dafne-backend
+$ cd blog-manager/backend
 
 # Instale as dependencias
-$ yarn install
+$ yarn 
 
 # Inicie o servidor que irá rodar na porta 3333
 $ yarn dev
