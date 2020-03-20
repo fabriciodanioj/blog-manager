@@ -38,9 +38,10 @@ export default function Dashboard() {
               <Article
                 key={article._id}
                 id={article._id}
-                name={article.name}
+                name={article.author}
                 title={article.title}
                 date={article.createdAt}
+                checkbox={true}
               />
             ))}
         </Content>

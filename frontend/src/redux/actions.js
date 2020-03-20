@@ -4,3 +4,10 @@ export function addToCheckboxList(id) {
     id
   };
 }
+
+export function showView(id) {
+  return {
+    type: "SHOW",
+    id
+  };
+}

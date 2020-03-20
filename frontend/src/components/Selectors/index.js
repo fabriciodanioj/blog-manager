@@ -8,8 +8,6 @@ export default function Selectors() {
   const data = useSelector(state => state.ArticleSelectedList);
   const count = data.length;
 
-  console.log(data);
-
   return (
     <Container>
       <p>{count} artigo(s) selecionado(s)</p>

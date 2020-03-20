@@ -10,6 +10,7 @@ export const Container = styled.div`
   margin-top: 50px;
   padding-left: 40px;
   padding-right: 40px;
+  
 
   i {
     margin-left: 10px;

@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #eff3f8;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   width: 250px;
   height: 100%;
   padding-left: 20px;
   padding-right: 20px;
-
 
   button {
     width: 210px;

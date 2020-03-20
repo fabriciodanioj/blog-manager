@@ -16,5 +16,4 @@ export const Title = styled.h1`
 
 export const Content = styled.div`
   overflow-y: hidden;
-  margin-top:20px;
 `;

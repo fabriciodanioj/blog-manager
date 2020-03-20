@@ -4,8 +4,30 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  padding-right: 40px;
   padding-left: 40px;
-  margin-top: 20px;
+
+  border-radius: ${props => {
+    if (props.state) {
+      return "5px";
+    }
+    return null;
+  }};
+
+  box-shadow: ${props => {
+    if (props.state) {
+      return "2px 2px 2px 1px rgba(0, 0, 0, 0.2);";
+    }
+    return null;
+  }};
+
+  background-color: ${props => {
+    if (props.state) {
+      return "white";
+    }
+    return null;
+  }};
 
 
   input {
@@ -13,6 +35,8 @@ export const Container = styled.div`
     height: 24px;
     border: none;
     border-radius: 50%;
+    margin-right: 5px;
+
   }
 
   input:checked {
@@ -22,19 +46,41 @@ export const Container = styled.div`
     border-radius: 50%;
   }
 
-  div {
-    padding-left: 20px;
-    padding-right: 20px;
+  button {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    border: none;
+    background-color: #eff3f8;
+    padding-top: 10px;
+    padding-top: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    cursor: pointer;
 
-    p {
-      font-size: 12px;
-      font-weight: normal;
-    }
+    background-color: ${props => {
+      if (props.state) {
+        return "white";
+      }
+      return null;
+    }};
 
-    h1 {
-      font-size: 18px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+
+      p {
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      h1 {
+        font-size: 18px;
+        margin-left: 10px;
+      }
     }
   }
 `;
-
-
