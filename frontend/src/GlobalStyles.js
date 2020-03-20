@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
-
   * {
     margin: 0;
     outline: 0;
@@ -11,7 +9,8 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
-    height: 100%
+    height: 100%;
+    overflow: hidden;
   }
 
   body {
@@ -21,6 +20,13 @@ export default createGlobalStyle`
 
   ul {
     list-style: none
+  }
+
+  .app {
+    display:flex;
+    flex-direction:row;
+    height: 100%;
+    flex: 1;
   }
   
 `;

@@ -5,19 +5,13 @@ export const Container = styled.div`
   height: 100%;
   background-color: rgb(176, 177, 198);
   overflow-y: auto;
-
-  .top {
-    display: flex;
-    margin-top: 40px;
-    margin-right: 40px;
-    justify-content: space-between;
-  }
 `;
 
 export const Title = styled.h1`
   font-size: 18px;
   color: #000;
   margin-left: 40px;
+  margin-top: 40px;
 `;
 
 export const Content = styled.div`

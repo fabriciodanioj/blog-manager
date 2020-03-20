@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Section, Profile } from "./styles";
+import { Container, Section } from "./styles";
+import Profile from '../../components/Profile'
 
 export default function SideBar() {
   return (
@@ -15,7 +16,7 @@ export default function SideBar() {
 
       <Section>
         <h1>Arquivos</h1>
-        <a href="/articles">Meus Artigos</a>
+        <a href="/dashboard">Meus Artigos</a>
         <a href="/shared">Compartilhados</a>
         <a href="/trash">Lixeira</a>
       </Section>
@@ -31,18 +32,7 @@ export default function SideBar() {
         </ul>
       </Section>
 
-      <Profile>
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BODEwMjkzNDIzOV5BMl5BanBnXkFtZTgwOTQ4NTU0NzE@._V1_UX172_CR0,0,172,256_AL_.jpg"
-          alt="avatar"
-          className="avatar"
-        />
-        <div>
-          <h1>Fabricio Dani</h1>
-          <h2>Usuário Premium</h2>
-        </div>
-        <i class="material-icons">exit_to_app</i>
-      </Profile>
+      <Profile />
     </Container>
   );
 }
