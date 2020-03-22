@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   width: 100%;
@@ -10,9 +9,18 @@ export const Container = styled.div`
   margin-top: 50px;
   padding-left: 40px;
   padding-right: 40px;
-  
 
-  i {
+  p {
+    color: #888888;
+  }
+
+  button {
+    border: none;
     margin-left: 10px;
+    cursor: pointer;
+    background-color: #eff3f8;
+  }
+  i {
+    color: #888888;
   }
 `;

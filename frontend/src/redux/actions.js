@@ -11,3 +11,9 @@ export function showView(id) {
     id
   };
 }
+
+export function resetState() {
+  return {
+    type: "RESET_STATE"
+  };
+}

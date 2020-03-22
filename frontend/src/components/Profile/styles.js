@@ -4,7 +4,22 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: 0px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+    align-items: space-between;
+    margin-top: 50px;
+    div {
+      h1 {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      h2 {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
 
   .avatar {
     width: 30px;
@@ -26,5 +41,9 @@ export const Container = styled.div`
       font-size: 10px;
       text-transform: uppercase;
     }
+  }
+
+  i {
+    color: #888888;
   }
 `;

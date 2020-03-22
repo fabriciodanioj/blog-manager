@@ -10,11 +10,17 @@ const PostSchema = new Schema(
       type: String,
       required: true,
     },
-    img: {
-      type: String,
-    },
+    img: String,
     content: {
       type: String,
+      required: true,
+    },
+    categories: {
+      type: [Schema.Types.ObjectId],
+    },
+    active: {
+      type: Boolean,
+      default: true,
     },
   },
   {

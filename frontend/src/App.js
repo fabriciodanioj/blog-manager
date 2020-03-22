@@ -8,16 +8,20 @@ import SideBar from "./components/SideBar";
 import Routes from "./routes";
 import store from "./redux/store";
 
+import { QueryParamProvider } from "use-query-params";
+
 function App() {
   return (
-    <Provider store={store}>
-      <div className="app">
-        <SideBar />
-        <Routes />
+    <QueryParamProvider>
+      <Provider store={store}>
+        <div className="app">
+          <SideBar />
+          <Routes />
 
-        <GlobalStyle />
-      </div>
-    </Provider>
+          <GlobalStyle />
+        </div>
+      </Provider>
+    </QueryParamProvider>
   );
 }
 

@@ -6,9 +6,11 @@ export const Container = styled.div`
   background-color: #eff3f8;
   overflow-y: auto;
 
-  @media (max-width: 480px) {
-    visibility: hidden;
-    width: 0px;
+  .top {
+    display: flex;
+    margin-top: 40px;
+    margin-right: 40px;
+    justify-content: space-between;
   }
 `;
 
@@ -16,7 +18,6 @@ export const Title = styled.h1`
   font-size: 18px;
   color: #000;
   margin-left: 40px;
-  margin-top: 40px;
 `;
 
 export const Content = styled.div`

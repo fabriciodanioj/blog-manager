@@ -29,14 +29,12 @@ export const Container = styled.div`
     return null;
   }};
 
-
   input {
     width: 24px;
     height: 24px;
     border: none;
     border-radius: 50%;
     margin-right: 5px;
-
   }
 
   input:checked {
@@ -70,7 +68,8 @@ export const Container = styled.div`
     div {
       display: flex;
       flex-direction: column;
-      align-content: flex-start;
+      align-items: flex-start;
+      margin-left: 20px;
 
       p {
         font-size: 12px;
@@ -79,7 +78,6 @@ export const Container = styled.div`
 
       h1 {
         font-size: 18px;
-        margin-left: 10px;
       }
     }
   }

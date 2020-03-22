@@ -4,10 +4,37 @@ export const Container = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  justify-content: space-between;
+  min-width: 250px;
   height: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 10px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50px;
+      background-color: #fff;
+      color: #888888;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: 0;
+    }
+
+    button:hover {
+      background-color: #fff;
+    }
+  }
 
   button {
     width: 210px;
@@ -21,10 +48,10 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     outline: 0;
+    cursor: pointer;
   }
 
   button:hover {
-    cursor: pointer;
     background-color: #9954e0;
   }
 
@@ -40,6 +67,16 @@ export const Container = styled.div`
     width: 80px;
     margin-top: 20px;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: 480px) {
+    .header {
+      button {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+      }
+    }
   }
 `;
 
@@ -62,7 +99,7 @@ export const Section = styled.div`
     padding-left: 5px;
   }
 
-  li {
+  p {
     margin-bottom: 5px;
     font-size: 14px;
     text-decoration: none;
@@ -70,4 +107,3 @@ export const Section = styled.div`
     padding-left: 5px;
   }
 `;
-

@@ -5,6 +5,11 @@ export const Container = styled.div`
   height: 100%;
   background-color: #eff3f8;
   overflow-y: auto;
+
+  @media (max-width: 480px) {
+    visibility: hidden;
+    width: 0px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -16,5 +21,5 @@ export const Title = styled.h1`
 
 export const Content = styled.div`
   overflow-y: hidden;
-  margin-top:20px;
+  margin-top: 20px;
 `;

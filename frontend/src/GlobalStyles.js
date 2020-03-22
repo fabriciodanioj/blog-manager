@@ -28,5 +28,18 @@ export default createGlobalStyle`
     height: 100%;
     flex: 1;
   }
+
+  @media (max-width: 380px) {
+    .app {
+    display:grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    flex: 1;
+
+    .sidebar {
+      height: 100%;
+    }
+  }
+  }
   
 `;

@@ -1,32 +1,40 @@
 import React from "react";
 
+import { useParams } from "react-router-dom";
+
 import Filter from "../../components/Filter";
+import Selectors from "../../components/Selectors";
 import Article from "../../components/Article";
 import View from "../../components/View";
 
-// import api from "../../services/api";
+import api from "../../services/api";
 
 import { Container, Title, Content } from "./styles";
 
-export default function Shared() {
-  const [articles, setArticles] = React.useState();
+export default function Categories() {
+  const [articles, setArticles] = React.useState([]);
+
+  let { id } = useParams();
 
   React.useEffect(() => {
     const fetchData = async () => {
-      // const response = await api.get("/post");
-
-      // setArticles(response.data);
+      const response = await api.get(`/post?categoryId=${id}`);
+      setArticles(response.data);
     };
 
     fetchData();
-  }, []);
+  }, [id]);
+
   return (
     <>
       <Container>
-        <Title>Compartilhados</Title>
+        <div className="top">
+          <Title>Meus Artigos</Title>
+        </div>
         <Filter />
+        <Selectors />
         <Content>
-          {(articles &&
+          {articles &&
             articles.map(article => (
               <Article
                 key={article._id}
@@ -36,9 +44,7 @@ export default function Shared() {
                 date={article.createdAt}
                 checkbox={true}
               />
-            ))) ?? (
-            <Title style={{ marginTop: 20 }}>Nenhum artigo para mostrar</Title>
-          )}
+            ))}
         </Content>
       </Container>
       <View />

@@ -4,36 +4,41 @@ import Filter from "../../components/Filter";
 import Selectors from "../../components/Selectors";
 import Article from "../../components/Article";
 import View from "../../components/View";
-import Modal from "../../components/AddArticlesModal";
 
 import api from "../../services/api";
 
 import { Container, Title, Content } from "./styles";
 
-export default function Dashboard() {
+export default function Dashboard({ history }) {
   const [articles, setArticles] = React.useState();
 
   React.useEffect(() => {
     const fetchData = async () => {
-      const response = await api.get("/post");
+      const response = await api.get("/post?active=true");
 
       setArticles(response.data);
     };
 
     fetchData();
-  }, []);
+  }, [articles]);
 
   return (
     <>
       <Container>
         <div className="top">
           <Title>Meus Artigos</Title>
-          <Modal />
+          <button
+            onClick={() => {
+              history.push("/new");
+            }}
+          >
+            Novo artigo
+          </button>
         </div>
         <Filter />
-        <Selectors />
+        <Selectors trash={false} />
         <Content>
-          {articles &&
+          {(articles &&
             articles.map(article => (
               <Article
                 key={article._id}
@@ -43,7 +48,9 @@ export default function Dashboard() {
                 date={article.createdAt}
                 checkbox={true}
               />
-            ))}
+            ))) ?? (
+            <Title style={{ marginTop: 20 }}>Nenhum artigo para mostrar</Title>
+          )}
         </Content>
       </Container>
       <View />

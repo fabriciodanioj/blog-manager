@@ -9,6 +9,7 @@ class PostController {
         author: Yup.string().required(),
         img: Yup.string(),
         content: Yup.string().required(),
+        category: Yup.string(),
       });
 
       if (!(await schema.isValid(req.body))) {
@@ -25,6 +26,14 @@ class PostController {
 
   async index(req, res) {
     try {
+      if (Object.keys(req.query).length !== 0) {
+        if (req.query.categoryId) {
+          const posts = await Post.find({ categories: req.query.categoryId });
+          return res.status(200).send(posts);
+        }
+        const posts = await Post.find({ active: req.query.active });
+        return res.status(200).send(posts);
+      }
       const posts = await Post.find({});
       return res.status(200).send(posts);
     } catch (error) {
@@ -59,7 +68,7 @@ class PostController {
 
       const { id } = req.params;
 
-      await Post.findByIdAndUpdate({ id }, req.body);
+      await Post.findByIdAndUpdate({ _id: id }, req.body);
 
       return res.status(200).send();
     } catch (error) {

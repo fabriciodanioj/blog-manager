@@ -11,4 +11,15 @@ export const Container = styled.div`
   padding-right: 40px;
   padding-bottom: 20px;
   border-bottom: 0.5px solid #888888;
+
+  i {
+    color: #888888;
+  }
+
+  .selector {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+  }
 `;
