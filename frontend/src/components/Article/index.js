@@ -5,6 +5,8 @@ import { addToCheckboxList, showView } from "../../redux/actions";
 
 import DateParse from "../../utils/ParseDate";
 
+import CheckBox from '../CheckBox'
+
 import { Container } from "./styles";
 
 export default function Article({ id, name, title, date, checkbox }) {
@@ -22,11 +24,7 @@ export default function Article({ id, name, title, date, checkbox }) {
 
   return (
     <Container state={selected} checkbox={checkbox}>
-      <input
-        type="checkbox"
-        name="checkbox-article"
-        onChange={addArticleToList}
-      />
+      <CheckBox onClick={addArticleToList} className='checkbox' />
       <button onClick={addArticleToShow}>
         <div>
           <p>{name}</p>

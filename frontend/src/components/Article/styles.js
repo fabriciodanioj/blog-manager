@@ -29,19 +29,8 @@ export const Container = styled.div`
     return null;
   }};
 
-  input {
-    width: 24px;
-    height: 24px;
-    border: none;
-    border-radius: 50%;
+  .checkbox {
     margin-right: 5px;
-  }
-
-  input:checked {
-    width: 26px;
-    height: 26px;
-    border: none;
-    border-radius: 50%;
   }
 
   button {
