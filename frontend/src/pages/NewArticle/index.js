@@ -8,7 +8,7 @@ import { setCategories } from "../../redux/actions";
 
 import { Container } from "./styles";
 
-export default function NewArticle() {
+export default function NewArticle({history}) {
   const [content, setContent] = React.useState("");
   const [title, setTitle] = React.useState("");
   const [img, setImg] = React.useState("");
@@ -32,7 +32,7 @@ export default function NewArticle() {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    const response = await api.post("/post", {
+    await api.post("/post", {
       title,
       content,
       author: "Fabricio Dani",
@@ -40,7 +40,7 @@ export default function NewArticle() {
       categories: category
     });
 
-    console.log(response);
+    history.push('/dashboard')
   };
 
   return (
