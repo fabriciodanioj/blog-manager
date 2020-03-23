@@ -4,7 +4,8 @@ import Profile from "../../components/Profile";
 import api from "../../services/api";
 
 export default function SideBar() {
-  const [categories, setCategories] = React.useState();
+  const [categories, setCategories] = React.useState([]);
+  const [newCategory, setNewCategory] = React.useState("");
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -15,6 +16,17 @@ export default function SideBar() {
     fetchData();
   }, [categories]);
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (newCategory.length > 0) {
+      await api.post("/category", {
+        name: newCategory
+      });
+    }
+
+    setNewCategory("");
+  }
   return (
     <Container>
       <div>
@@ -42,6 +54,19 @@ export default function SideBar() {
 
         <Section>
           <h1>Categorias</h1>
+          <div className="add">
+            <input
+              type="text"
+              placeholder="Criar categoria"
+              value={newCategory}
+              onChange={e => {
+                setNewCategory(e.target.value);
+              }}
+            />
+            <button onClick={handleSubmit}>
+              <i class="material-icons">add</i>
+            </button>
+          </div>
           {(categories &&
             categories.map(category => (
               <a key={category._id} href={`/category/${category._id}`}>

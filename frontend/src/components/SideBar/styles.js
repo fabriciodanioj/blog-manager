@@ -85,6 +85,31 @@ export const Section = styled.div`
   flex-direction: column;
   margin-top: 20px;
 
+  .add {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    padding-left: 5px;
+    border: solid 0.5px;
+    margin-bottom: 10px;
+    width: 170px;
+    height: 30px;
+    border-top: none;
+    border-right: none;
+
+    input {
+      border: none;
+      width: 150px;
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      color: #888888;
+    }
+  }
+
   h1 {
     color: #888888;
     font-size: 14px;

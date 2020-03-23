@@ -17,3 +17,11 @@ export function resetState() {
     type: "RESET_STATE"
   };
 }
+
+
+export function setCategories(payload) {
+  return {
+    type: "SET_CATEGORIES",
+    payload
+  };
+}

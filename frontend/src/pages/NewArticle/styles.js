@@ -27,6 +27,11 @@ export const Container = styled.div`
       margin-top: 20px;
     }
 
+    textarea {
+      margin-top: 10px;
+      padding: 10px;
+    }
+
     .text-input {
       width: 600px;
       min-height: 400px;
@@ -36,6 +41,17 @@ export const Container = styled.div`
 
     button {
       align-self: center;
+      margin-top: 20px;
+      color: white;
+      background-color: #9954ff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .multi-select {
+      width: 400px;
       margin-top: 20px;
     }
   }
