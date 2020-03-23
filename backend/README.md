@@ -51,11 +51,15 @@ $ yarn dev
 - GET `/post/:id` -> Mostra um Post
 - PUT `/post/:id` -> Edita um Post
 
+- [x] Criação de Posts
+- POST `/category` -> Cria uma nova categoria
+- GET `/category` -> Lista as categorias criadas
+
 
 ---
 ## Meta
 Feito com ♥ por Fabricio Dani :wave: [LinkedIn!](https://www.linkedin.com/in/fabricio-dani-373469176/)
 
-Distribuido sobre licensa do MIT. Veja [LICENSE](https://github.com/fabriciodanioj/dafne-backend/blob/master/LICENSE) para mais informações.
+Distribuido sobre licensa do MIT. Veja [LICENSE](https://github.com/fabriciodanioj/blog-manager/blob/master/LICENSE) para mais informações.
 
 [https://github.com/fabriciodanioj](https://github.com/fabriciodanioj)
